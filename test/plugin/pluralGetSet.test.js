@@ -114,13 +114,13 @@ it('Set Milliseconds', () => {
 
 it('Set Month and Year in last day of month', () => {
   // 2011-07-31 -> 2011-02-28
-  const origin = dayjs('2011-07-31T14:48:00.000Z')
+  const origin = dayjs('2011-07-31T14:48:00.000')
   const setMonth = origin.set('month', 1)
   expect(setMonth.months()).toBe(1)
   expect(origin.dates()).toBe(31)
   expect(setMonth.dates()).toBe(28)
   // 2000-02-29 -> 2001-02-28
-  const origin2 = dayjs('2000-02-29T14:48:00.000Z')
+  const origin2 = dayjs('2000-02-29T14:48:00.000')
   const setYear = origin2.set('years', 2001)
   expect(setYear.months()).toBe(1)
   expect(origin2.dates()).toBe(29)

@@ -20,41 +20,41 @@ it('No argument && null && undefined', () => {
 })
 
 it('ReferenceTime', () => {
-  const now = '2015-01-15T14:21:22.000Z'
+  const now = '2015-01-15T14:21:22.000'
   const dates = [
     {
       name: 'nextDay',
-      date: '2015-01-14T11:23:55.000Z',
+      date: '2015-01-14T11:23:55.000',
       result: 'Tomorrow'
     },
     {
       name: 'sameDay',
-      date: '2015-01-15T11:23:55.000Z',
+      date: '2015-01-15T11:23:55.000',
       result: 'Today'
     },
     {
       name: 'nextWeek',
-      date: '2015-01-09T11:23:55.000Z',
+      date: '2015-01-09T11:23:55.000',
       result: 'Thursday'
     },
     {
       name: 'lastDay',
-      date: '2015-01-16T11:23:55.000Z',
+      date: '2015-01-16T11:23:55.000',
       result: 'Yesterday'
     },
     {
       name: 'lastWeek',
-      date: '2015-01-21T11:23:55.000Z',
+      date: '2015-01-21T11:23:55.000',
       result: 'Last'
     },
     {
       name: 'sameElse',
-      date: '2015-01-01T11:23:55.000Z',
+      date: '2015-01-01T11:23:55.000',
       result: '01/15/2015'
     },
     {
       name: 'sameElse',
-      date: '2015-02-21T11:23:55.000Z',
+      date: '2015-02-21T11:23:55.000',
       result: '01/15/2015'
     }
   ]
@@ -74,8 +74,8 @@ it('Custom format', () => {
     sameElse: '[sameElse]'
   }
   expect(dayjs().calendar(null, format)).toEqual(moment().calendar(null, format))
-  const now = '2015-01-15T14:21:22.000Z'
-  const nextDayWithoutFormat = '2015-01-14T11:23:55.000Z'
+  const now = '2015-01-15T14:21:22.000'
+  const nextDayWithoutFormat = '2015-01-14T11:23:55.000'
   expect(dayjs(now).calendar(nextDayWithoutFormat, format))
     .toEqual(moment(now).calendar(nextDayWithoutFormat, format))
 })
@@ -85,8 +85,8 @@ it('Custom callback', () => {
     sameDay: jest.fn(),
     sameElse: jest.fn()
   }
-  const now = '2015-01-15T14:21:22.000Z'
-  const nextDayWithoutFormat = '2015-01-14T11:23:55.000Z'
+  const now = '2015-01-15T14:21:22.000'
+  const nextDayWithoutFormat = '2015-01-14T11:23:55.000'
   expect(dayjs(now).calendar(nextDayWithoutFormat, callbacks))
     .toEqual(moment(now).calendar(nextDayWithoutFormat, callbacks))
 })
@@ -126,7 +126,7 @@ it('callback is a function and first argument a moment that depicts now', () => 
 })
 
 it('set global calendar in locale file', () => {
-  const now = '2019-04-03T14:21:22.000Z'
+  const now = '2019-04-03T14:21:22.000'
   zhCn.calendar = {
     sameDay: '[今天]HH:mm',
     nextDay: '[明天]HH:mm',

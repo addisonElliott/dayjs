@@ -9,7 +9,7 @@ describe('Install', function () {
 
 describe('Core APIs', function () {
   it('Chain Methods', function () {
-    expect(dayjs('2011-02-05T14:48:00.000Z')
+    expect(dayjs('2011-02-05T14:48:00.000')
       .clone()
       .set('month', 3)
       .set('second', 30)
